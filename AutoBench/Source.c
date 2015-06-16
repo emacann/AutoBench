@@ -25,8 +25,11 @@ int main(int argc, char* argv[])
 			strcat(command, " --csv ");
 			strcat(command, LOGDIR);
 			strncat(command, file_list[i], strlen(file_list[i]) - 4);
-			strcat(command, "_");
-			strcat(command, buffer);
+#if 0
+            strcat(command, "_");
+            strcat(command, buffer);
+#endif // 0
+
 			strcat(command, LOG_EXT);
 			strcat(command, " ");
 
